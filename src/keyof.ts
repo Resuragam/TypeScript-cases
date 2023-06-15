@@ -42,3 +42,19 @@ type _Partial<T> = {
 type _Required<T> = {
     [P in keyof T]-?: T[P]
 }
+
+type ArrayIs = {
+    [N: number]: unknown
+}
+type A = keyof ArrayIs
+
+type MapIs = {
+    [K: string]: unknown
+}
+type M = keyof MapIs
+
+class EG {
+    private name: string
+    public age: number
+}
+type TEG = keyof EG
